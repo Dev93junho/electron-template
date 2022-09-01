@@ -11,8 +11,10 @@ function createWindow() {
   win.loadFile('./index.html')
 
   let {PythonShell} = require('python-shell')
-  PythonShell.run('app.py', function (err, results) {
+  let options = {};
+  PythonShell.run('app.py', options, function (err, results) {
     if (err) console.log(err);
+    console.log(results)
   });
 }
 
