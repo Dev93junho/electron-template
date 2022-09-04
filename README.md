@@ -1,2 +1,2 @@
 # electron
-개인학습용
+by BS.Kang
