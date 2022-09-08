@@ -1,0 +1,35 @@
+html, body {margin: 0; padding: 0}
+
+body {
+    background-color: rgb(163, 163, 163);
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: absolute;
+    background-color:rgb(163, 163, 163);
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    transition: transform 0.2s;
+}
+.content {
+    padding-right: 0px;
+    min-height: 100vh;
+    background-color:rgb(255, 255, 255);
+    transition: padding-left 0.2s;
+}
+ 
+.content > #tgl {
+    display: flex;
+    margin-left: auto;
+}
+
+.menu-opened > .sidebar {
+    transform: translateX(-300px);
+}
+
+.menu-opened > .content {
+    padding-right: 300px;
+}
