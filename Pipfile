@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 shell = "*"
+scrapy = "*"
 
 [dev-packages]
 
