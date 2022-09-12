@@ -1,9 +1,37 @@
 <head>
   <link rel="stylesheet" href="./static/styles.css">
+  <script src="assets/json-preview.js"></script>
 </head>
 
 <body>
   <div id="home">
+    <div class="content">
+      <button id="tgl" onclick="menu()"> <<< </button>
+      <!-- editorjs -->
+      <div class="ce-example">
+        <div class="ce-example__content _ce-example__content--small">
+          <div id="editorjs"></div>
+    
+          <button id="saveButton">
+            editor.save()
+          </button>
+    
+          <div class="ce-example__statusbar">
+            Readonly:
+            <b id="readonly-state">
+              Off
+            </b>
+            <div class="ce-example__statusbar-button" id="toggleReadOnlyButton">
+              toggle
+            </div>
+          </div>
+        </div>
+        <div class="ce-example__output">
+          <pre class="ce-example__output-content" id="output"></pre>
+        </div>
+      </div>
+    </div>
+    
     <!-- sidebar -->
     <nav class="sidebar">
       sidebar menu
@@ -12,19 +40,6 @@
         <input type="button" value="Gen">
       </form>
     </nav>
-
-    <div class="content">
-      <button id="tgl" onclick="menu()"> <<< </button>
-      <!-- editorjs -->
-      <div class="ce-example">
-        <div class="ce-example__content _ce-example__content--small">
-          <div>
-            <div id="editorjs"></div>
-            <button id="saveButton">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 
@@ -48,4 +63,5 @@
 
   <script src="./editor.js"></script>
   <script src="./static/sidebar.js"></script>
+
 </body>
